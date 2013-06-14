@@ -34,8 +34,8 @@
 			// BUILD PAGE PEEL
 		    this.find("li:first-child").addClass('small-intro');
 		    this.find("li:nth-child(2)").addClass('large-intro');
-	        this.prepend('<li id="small-peel-white"/>');
-	        this.prepend('<li id="small-peel-curl"/>'); 
+	        this.prepend('<li id="peelz-bg"/>');
+	        this.prepend('<li id="peelz-curl"/>'); 
 	        this.find('.large-intro').prepend('<div id="peel-close"/>'); 
 	        
 	        // START UP STYLES
@@ -48,42 +48,38 @@
 	
 						//gets rid of small preview text
 						$('.small-intro').stop().animate({left: nsWidth });
-						
-						//changes the small preview curl to the larger preview curl
-						$('#small-peel-curl').stop().click(function(){
+						//on click of page peel curl
+						$('#peelz-curl').stop().click(function(){
+								//hide page peel curl
 								$(this).hide();
-								$('#small-peel-white').css({background:'white'});
-						}).animate({width: o.lWidth, height: o.lHeight}, 500, function(){ 
-								$('#large-peel-curl').stop().animate({width: o.lWidth, height: o.lHeight}, 500)
-								$('#large-peel-curl').click( function(){
-										$(this).stop().animate({backgroundPositionX:o.lWidth, backgroundPositionY: o.lHeight},500);
-										$('#large-peel-white').addClass('white-bg');
-								});
-						});
-						
+								//change background color to white
+								$('#peelz-bg').css({background:'white'});
+						//animate the small page curl to the larger size
+						}).animate({width: o.lWidth, height: o.lHeight}, 500);
+						//animate large intro text to slide on screen
 						$('.large-intro').stop().animate({width: intolWidth, height: introlHeight, left: 0},500);
-						$('#small-peel-white').stop().animate({width:o.lWidth, height: o.lHeight},500);
-						$('.full-open').removeClass("hide");
-						$('#peel-close').click( function(){ 
-								$('#small-peel-curl').show()
-								$('#small-peel-white').css({backgroundColor:'transparent'});
+						//animate small peel to large size
+						$('#peelz-bg').stop().animate({width:o.lWidth, height: o.lHeight},500);
+						//on click of close button do this
+						$('#peel-close').click(function(){ 
+								//show background image of peel curl
+								$('#peelz-curl').show()
+								//remove background color
+								$('#peelz-bg').css({backgroundColor:'transparent'});
 						});
 			}, 
 			//TOGGLE HOVER OPTIONS
 			function(){
-						//gets rid of small preview text
-						if ($('#small-peel-curl').is(":visible")) {
+						//Check to see if page curl is visible
+						if ($('#peelz-curl').is(":visible")) {
+								//if it is, get rid of small intro text
 								$('.small-intro').stop().animate({left: 0 });
-								//changes the small preview curl to the larger preview curl
-								$('#small-peel-curl').stop().animate({width: o.sWidth, height: o.sHeight}, 500, function(){ 
-											$('#large-peel-curl').stop().animate({width: o.lWidth, height: o.lHeight}, 500)
-											$('#large-peel-curl').click( function(){
-												$(this).stop().animate({backgroundPositionX: o.lWidth, backgroundPositionY: o.lHeight},500);
-												$('#large-peel-white').addClass('white-bg');
-											});
-								});
+								//animate the small curl to the larger size
+								$('#peelz-curl').stop().animate({width: o.sWidth, height: o.sHeight}, 500);
+								//remove large intro text
 								$('.large-intro').stop().animate({width: o.sWidth, height: o.sHeight, left: nlWidth},500);
-								$('#small-peel-white').stop().animate({width: o.sWidth, height: o.sHeight},500);
+								//animate bacground
+								$('#peelz-bg').stop().animate({width: o.sWidth, height: o.sHeight},500);
 					}
 			}); //END hover
     	} // END peelz 
