@@ -1,6 +1,6 @@
 # Peelz - Page Corner Peel jQuery Plugin
 
-Althought is is still a beta release. This plugin is very light weight (only 4kb) and simple. More options will be added later. You can style it with css and supports full HTML unlike other corner page peel plugins.
+Althought is is still a beta release. This plugin is very light weight (only 4kb) and simple. More options and IE 7 & 8 support will be added later. You can style it with css and supports full HTML unlike other corner page peel plugins.
 
 
 ## Documentation
@@ -26,7 +26,7 @@ Peelz has 4 simple options. You have 2 containers and you can set the height and
 					sWidth: 100,
 					lHeight: 400,
 					lWidth: 400
-				});
+			});
            
 ### HTML
 
