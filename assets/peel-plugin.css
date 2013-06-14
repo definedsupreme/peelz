@@ -1,0 +1,155 @@
+/* only for testing while building out */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #000;
+}
+.test1 {
+	background-color: blue;
+}
+.test2 {
+	background-color: red;
+}
+
+/* /only for testing */
+
+
+#page_peel{
+	position:absolute;
+	z-index:5000000;
+	top:0px;
+	left:0px;
+}
+
+
+
+
+/* small peel */
+
+#page_peel #small-peel-white{
+	background-image:url('../images/sm-peel-white.png') !important;
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-color:transparent;
+	background-size:100% 100% !important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/sm-peel-white.png',sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/sm-peel-white.png',sizingMethod='scale')";
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index: -1;
+	width:100%;
+	height:100%;
+	
+}
+#page_peel #small-peel-curl{
+	background:url('../images/large-peel-curl.png') right top no-repeat;
+	background-size:100% 100%;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/sm-peel-white.png',sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/sm-peel-white.png',sizingMethod='scale')";
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:4;
+	width:100%;
+	height:100%;
+	
+}
+#page_peel .small-intro{
+	width: 136px;
+	z-index: 1;
+	position: absolute;
+	left: 2px;
+
+}
+
+
+
+/* large peel */
+
+#page_peel #large-peel-white{
+	background:url('../images/large-peel-white.png') -262px -477px no-repeat;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index: -1;
+	width:264px;
+	height:484px;
+	
+}
+
+#page_peel #large-peel-curl{
+	background:url('../images/large-peel-curl.png') right top no-repeat;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	
+}
+#page_peel .large-intro{
+	width:80px;
+	height:140px;
+	overflow:hidden;
+	margin-top: 0px;
+	z-index: 2;
+
+}
+
+#page_peel .large-intro h1{
+	font-family: "GothamBook", Arial;
+	font-size: 19px;
+	font-weight: bold;
+	color: #b88125;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#page_peel .large-intro p{
+	font-family: "GothamBook", Arial;
+	font-size: 15px;
+	font-weight: bold;
+	color: #7b7a74;
+	text-align: center;
+}
+
+#page_peel .large-intro .burger-icon{
+	margin-left: 36px;
+	margin-top: 73px;
+}
+#page_peel .large-intro #peel-close{
+	background: url('../images/close-btn.jpg') 0 0 no-repeat;
+	width: 15px;
+	height: 15px;
+	display: block;
+	text-indent: -99999px;
+	font-size: 0;
+	z-index: 10;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+}
+#page_peel .full-open{
+	margin-left: 10px;
+}
+.hide{
+	display: none !important;
+}
+
+.remove-bg{
+	background: none !important;
+}
+
+.white-bg{
+	background: #fff !important;
+}
+
+
+
+
+

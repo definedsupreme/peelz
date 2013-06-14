@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Open Souce Page Peel</title>
+		
+		<link rel="stylesheet" href="assets/peel-plugin.css">
+		<style>
+			/* only for testing while building out */
+			body{
+				background: #000;
+				color: white;
+			}
+			.test2{
+				font-size: 90px;
+			}
+		</style>
+
+		<script type="text/javascript" src="assets/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="assets/peel-plugin.js"></script>
+		
+		<script>
+			//TESTing
+			$(document).ready(function() {
+				$("#page_peel").peelz({
+					// TEST CUSTOM OPTIONS
+					sHeight: 100,
+					sWidth: 100,
+					lHeight: 400,
+					lWidth: 400
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<ul id="page_peel">
+			<li class="test1">Small Content</li>
+			<li class="test2">Large Content</li>
+		</ul>
+	</body>
+</html>
